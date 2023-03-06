@@ -1,0 +1,32 @@
+#include<stdio.h>
+void main()
+{
+char op;
+float a,b,res;
+printf("enter the opertator \n");
+scanf("%c",&op);
+printf("enter 2 operands \n");
+scanf("%f%f",&a&b);
+switch(op)
+{
+   case'+' : res=a+b;
+                    break;
+ case'-' : res=a-b;
+                    break;
+ case'*' : res=a*b;
+                    break;
+case'/' : if (b!=0)
+        {
+           res=a/b;
+        }
+       else
+       {
+        printf("division not possible \n");
+          exit(0);
+        }
+     break;
+default:printf("invalid operator \n);
+      exit(0);
+    }
+print("result=%f\n",res);
+}
